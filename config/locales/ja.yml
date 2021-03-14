@@ -1,14 +1,30 @@
---2021-03-14 12:28:09--  https://github.com/svenfuchs/rails-i18n/blob/master/rails/locale/ja.yml
-github.com (github.com) をDNSに問いあわせています... 52.69.186.44
-github.com (github.com)|52.69.186.44|:443 に接続しています... 接続しました。
-HTTP による接続要求を送信しました、応答を待っています... 200 OK
-長さ: 特定できません [text/html]
-`ja.yml' に保存中
-
-     0K .......... .......... .......... .......... ..........  392K
-    50K .......... .......... .......... .......... ..........  344K
-   100K .......... .......... .......... .......... ..........  869K
-   150K .......... .                                            770K=0.3s
-
-2021-03-14 12:28:10 (467 KB/s) - `ja.yml' へ保存終了 [165537]
-
+# --2021-03-14 12:28:09--  https://github.com/svenfuchs/rails-i18n/blob/master/rails/locale/ja.yml
+# github.com (github.com) をDNSに問いあわせています... 52.69.186.44
+# github.com (github.com)|52.69.186.44|:443 に接続しています... 接続しました。
+# HTTP による接続要求を送信しました、応答を待っています... 200 OK
+# 長さ: 特定できません [text/html]
+# `ja.yml' に保存中
+#
+#      0K .......... .......... .......... .......... ..........  392K
+#     50K .......... .......... .......... .......... ..........  344K
+#    100K .......... .......... .......... .......... ..........  869K
+#    150K .......... .                                            770K=0.3s
+#
+# 2021-03-14 12:28:10 (467 KB/s) - `ja.yml' へ保存終了 [165537]
+ja:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "バリデーションに失敗しました: %{errors}"
+        restrict_dependent_destroy:
+          has_one: "%{record}が存在しているので削除できません"
+          has_many: "%{record}が存在しているので削除できません"
+    models:
+      task: タスク
+    attributes:
+      task:
+        id: ID
+        name: 名称
+        description: 詳しい説明
+        created_at: 登録日時
+        updated_at: 更新日時
