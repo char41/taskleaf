@@ -27,6 +27,12 @@ class TasksController < ApplicationController
     redirect_to tasks_url, notice: "タスク「#{task.name}」を更新しました。"
   end
 
+  def destroy
+    task = Task.find(params[:id])
+    task.delete
+    redirect_to tasks_path, notice: "タスク「#{task.name}」を削除しました。"
+  end
+
   private
   def task_params
     params.require(:task).permit(:name, :description)
