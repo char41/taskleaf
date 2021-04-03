@@ -4,7 +4,7 @@ class Admin::UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(oarams[:id])
+    @user = User.find(params[:id])
   end
 
   def new
@@ -12,7 +12,7 @@ class Admin::UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find[:id]
+    @user = User.find(params[:id])
   end
 
   def create
